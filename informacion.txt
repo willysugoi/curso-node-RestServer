@@ -1,0 +1,20 @@
+- Primero generamos el package.json con el comando npm init -y
+- Luego utilizaremos por primera vez nodemon(nos permite ver los cambios en consola
+al instante en que guardamos), para ello ejecutamos el comando nodemon app
+- Luego instalamos express(para hacer webserver) con el comando npm i express
+- Luego instalamos dotenv(para crear variables de entorno, es similar a un web config)
+- Luego instalamos cors(npm i cors), que nos permite restringir quien puede acceder a nuestra api
+
+-- Recibir parametros
+Hay 3 formas de recibir parametros de entrada en una api rest:
+- Parametro body(controllers/usuario.js --> linea 25)
+Ej de entrada : {
+                    "nombre": "Pandorita",
+                    "edad": 1
+                }
+
+- Parametro de segmento(routes/usuario.js --> linea 17 y controllers/usuario.js --> linea 17)
+Ej de entrada: http://localhost:8080/api/usuarios/102
+
+- Parametros de query(controllers/usuario.js --> linea 10)
+Ej de entrada: http://localhost:8080/api/usuarios?apellido=toledo&direccion=tvial 1170
